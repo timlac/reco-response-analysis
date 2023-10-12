@@ -2,7 +2,9 @@ import pandas as pd
 import json
 from nexa_preprocessing.utils.time_series_operations import slice_by
 
+
 df = pd.read_csv("data/full_export.csv")
+
 
 count_of_rows = len(df[df['emotion_id_reply'] == 1000])
 print("Number of rows where emotion_id_reply is equal to 1000:", count_of_rows)
