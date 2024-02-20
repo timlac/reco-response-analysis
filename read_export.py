@@ -31,6 +31,15 @@ df = pd.concat(complete_aliases, ignore_index=True)
 df.to_csv("data/completed_export.csv", index=False)
 
 
+complete_and_incomplete_aliases = complete_aliases + incomplete_aliases
+
+df = pd.concat(complete_and_incomplete_aliases, ignore_index=True)
+df.to_csv("data/incomplete_export.csv", index=False)
+
+
+
+
+
 # # Specify the path to your JSON file
 # meta_file_path = "data/meta.json"
 
