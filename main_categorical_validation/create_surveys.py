@@ -42,11 +42,11 @@ meta_columns = ["user_id", "survey_id", "valence", "sex", "date_of_birth", "emot
 item_columns = ["filename", "emotion_id", "video_id", "reply", "has_reply"]
 
 
-df = pd.read_csv("data/incomplete_export.csv", converters={"emotion_options": pd.eval})
+df = pd.read_csv("../data/main_categorical_validation/incomplete_export.csv", converters={"emotion_options": pd.eval})
 
 
 # Specify the path to your JSON file
-meta_file_path = "data/meta.json"
+meta_file_path = "../data/main_categorical_validation/meta.json"
 
 # Open and read the JSON file
 with open(meta_file_path, 'r') as json_file:
@@ -106,6 +106,6 @@ for df_slice in slices:
 
     ret.append(survey)
 
-with open('surveys.json', 'w') as f:
+with open('../surveys.json', 'w') as f:
     json.dump(ret, f)
 

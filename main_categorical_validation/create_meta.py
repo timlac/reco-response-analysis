@@ -2,7 +2,7 @@ import pandas as pd
 from pprint import pprint
 import json
 
-path = "data/data vali ht23.xlsx"
+path = "../data/main_categorical_validation/data vali ht23.xlsx"
 
 df = pd.read_excel(path)
 
@@ -17,5 +17,5 @@ for i in data:
 
 
 # Writing to sample.json
-with open("data/meta.json", "w") as outfile:
+with open("../data/main_categorical_validation/meta.json", "w") as outfile:
     outfile.write(json.dumps(out))

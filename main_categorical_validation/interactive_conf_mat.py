@@ -12,7 +12,7 @@ from sklearn.metrics import classification_report, confusion_matrix
 
 import numpy as np
 
-df = pd.read_csv("data/full_export.csv")
+df = pd.read_csv("../data/main_categorical_validation/full_export.csv")
 
 count_of_rows = len(df[df['emotion_id_reply'] == 1000])
 print("Number of rows where emotion_id_reply is equal to 1000:", count_of_rows)
@@ -35,7 +35,7 @@ for s in slices:
             complete_aliases.append(s)
 
 # Specify the path to your JSON file
-meta_file_path = "data/meta.json"
+meta_file_path = "../data/main_categorical_validation/meta.json"
 
 # Open and read the JSON file
 with open(meta_file_path, 'r') as json_file:
