@@ -11,7 +11,6 @@ def create_plotly_heatmap(y_true, y_pred):
     print(emotion_ids)
 
     conf_matrix = confusion_matrix(y_true, y_pred)
-    print(conf_matrix)
 
     emotions = Mapper.get_emotion_from_id(emotion_ids)
 
