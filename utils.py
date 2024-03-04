@@ -8,7 +8,6 @@ from nexa_py_sentimotion_mapper.sentimotion_mapper import Mapper
 
 def create_plotly_heatmap(y_true, y_pred):
     emotion_ids = np.unique(y_true)
-    print(emotion_ids)
 
     conf_matrix = confusion_matrix(y_true, y_pred)
 
